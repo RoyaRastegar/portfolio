@@ -14,11 +14,11 @@ interface SectionHeaderProps {
  *   - a monospace eyebrow label
  *   - a Syne display heading
  */
-export function SectionHeader({ eyebrow, title, className }: SectionHeaderProps) {
+export function SectionHeader({ eyebrow, title }: SectionHeaderProps) {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true })
 
   return (
-    <div ref={ref} className={cn('relative mb-12', className)}>
+    <div ref={ref} className={cn('relative mb-12')}>
       {/* Background decorative number */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
