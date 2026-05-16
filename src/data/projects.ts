@@ -9,7 +9,7 @@ export const projects: Project[] = [
     techStack: ['React', 'JWT', 'MongoDB', 'Node.js', 'Express'],
     liveUrl: 'https://auth-protected-note.vercel.app/',
     githubUrl: '#',
-    image: '/public/projects/Note-app.png'
+    image: '/projects/Note-app.png'
   },
 
 ]
