@@ -117,7 +117,7 @@ export function Playground() {
       aria-label="Live Code Playground"
     >
       <div className="max-w-container mx-auto">
-        <SectionHeader eyebrow="Lab: Active Logic" title="Live Code Playground" sectionNum="05" />
+        <SectionHeader eyebrow="Lab: Active Logic" title="Live Code Playground"  />
 
         <p className="font-body text-base text-text-secondary mb-8 max-w-xl">
           Real patterns from my production work. Browse snippets — previews are fully interactive.
