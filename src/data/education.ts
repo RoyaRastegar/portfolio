@@ -1,4 +1,10 @@
-import type { EducationItem } from '../types'
+import type { EducationItem } from '../types';
+import {
+  SiReact,
+  SiJavascript,
+} from 'react-icons/si';
+import { FaHtml5,FaGraduationCap  } from 'react-icons/fa';
+import { FaNodeJs } from 'react-icons/fa6';
 
 export const education: EducationItem[] = [
   {
@@ -7,7 +13,7 @@ export const education: EducationItem[] = [
     name: 'B.Sc. Computer Software Engineering',
     institution: 'Islamic Azad University of Iran,Lahijan',
     date: '2009 – 2013',
-    icon: '🎓',
+    icon: FaGraduationCap ,
   },
   {
     id: 'react-cert',
@@ -15,7 +21,7 @@ export const education: EducationItem[] = [
     name: 'React, Redux & More',
     institution: 'Udemy',
     date: 'Sep 2023',
-    icon: '📜',
+    icon: SiReact,
   },
   {
     id: 'html-cert',
@@ -23,7 +29,7 @@ export const education: EducationItem[] = [
     name: 'HTML, CSS & JavaScript',
     institution: 'Udemy',
     date: 'Sep 2023',
-    icon: '📜',
+    icon: FaHtml5,
   },
   {
     id: 'js-cert',
@@ -31,13 +37,14 @@ export const education: EducationItem[] = [
     name: 'JavaScript',
     institution: 'Udemy',
     date: 'Nov 2023',
-    icon: '📜',
-  }, {
+    icon: SiJavascript,
+  },
+  {
     id: 'jnde-cert',
     type: 'certification',
     name: 'Master Node JS ',
     institution: 'Udemy',
     date: 'May 2026',
-    icon: '📜',
+    icon: FaNodeJs,
   },
-]
+];

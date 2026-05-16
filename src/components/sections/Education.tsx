@@ -19,7 +19,7 @@ export function Education() {
                        hover:border-accent transition-colors duration-300 group"
           >
             {/* Icon */}
-            <div className="text-3xl mb-4" aria-hidden="true">{item.icon}</div>
+            <div className="text-3xl mb-4" aria-hidden="true"><item.icon/></div>
 
             {/* Type label */}
             <p className="font-mono text-[10px] text-accent tracking-widest uppercase mb-2">

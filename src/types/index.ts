@@ -39,7 +39,7 @@ export interface EducationItem {
   name: string;
   institution: string;
   date: string;
-  icon: string;
+  icon:IconType;
 }
 
 export type CodeTokenType =
