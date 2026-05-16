@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --accent-glow-strong: rgba(56, 189, 248, 0.28);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-bg-base text-text-primary font-ui antialiased overflow-x-hidden; }
+  :focus-visible { @apply outline-2 outline-accent outline-offset-2; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0E1420; }
+  ::-webkit-scrollbar-thumb { background: #2A3A58; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #38BDF8; }
+}
+
+@layer utilities {
+  .section-num {
+    @apply absolute font-display font-black leading-none pointer-events-none select-none;
+    font-size: clamp(6rem, 15vw, 12rem);
+    color: #0E1C32;
+    top: 60px;
+    left: 0;
+    z-index: 0;
+  }
+  .text-hero    { font-size: clamp(3rem, 8vw, 5.5rem); line-height: 1.05; letter-spacing: -0.02em; }
+  .text-section { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; letter-spacing: -0.01em; }
+  .glow-border  { box-shadow: 0 0 0 1px #38BDF8, 0 0 24px var(--accent-glow); }
+  .glow-bg      { background: var(--accent-glow); }
+  .glow-text    { text-shadow: 0 0 20px rgba(56,189,248,0.4); }
+}
+
+@layer components {
+  .card       { @apply bg-bg-surface border border-border transition-all duration-300; }
+  .card-hover { @apply hover:border-accent hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(56,189,248,0.12)]; }
+  .tag        { @apply font-mono text-[11px] px-2.5 py-1 border border-border-bright text-text-secondary bg-bg-elevated transition-all duration-200 cursor-default leading-none; }
+  .tag-hover  { @apply hover:border-accent hover:text-accent; }
+  .tag-accent { @apply border-accent/40 text-accent; }
+  .tag-amber  { @apply border-amber/40 text-amber; }
+  .eyebrow    { @apply font-mono text-xs text-accent tracking-widest uppercase; }
+  .code-kw    { @apply text-purple-400; }
+  .code-fn    { @apply text-blue-400; }
+  .code-str   { @apply text-green-400; }
+  .code-cmt   { @apply text-text-muted italic; }
+  .code-tag   { @apply text-accent; }
+  .code-prop  { @apply text-orange-400; }
+  .code-num   { @apply text-text-muted text-xs w-7 inline-block text-right mr-4 select-none font-mono; }
+}
