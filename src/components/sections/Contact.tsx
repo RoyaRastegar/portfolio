@@ -61,7 +61,7 @@ export function Contact() {
     formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({ resolver: zodResolver(schema) })
 
-  const onSubmit = async (_data: ContactFormValues) => {
+  const onSubmit = async () => {
     // Simulate API call (replace with EmailJS or backend endpoint)
     await new Promise((r) => setTimeout(r, 1000))
     toast.success("Message sent! I'll get back to you soon.", { duration: 4000 })
@@ -70,7 +70,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative px-[5vw] py-[120px] max-w-container mx-auto" aria-label="Contact">
-      <SectionHeader eyebrow="Initiate Connection" title="Let's Build Something Together" sectionNum="07" />
+      <SectionHeader eyebrow="Initiate Connection" title="Let's Build Something Together" />
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
         {/* Left — contact info */}

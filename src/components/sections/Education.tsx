@@ -5,7 +5,7 @@ import { education } from '../../data/education'
 export function Education() {
   return (
     <section id="education" className="relative px-[5vw] py-[120px] max-w-container mx-auto" aria-label="Education and Certifications">
-      <SectionHeader eyebrow="Education & Certifications" title="Academic & Professional" sectionNum="06" />
+      <SectionHeader eyebrow="Education & Certifications" title="Academic & Professional"  />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {education.map((item, i) => (
