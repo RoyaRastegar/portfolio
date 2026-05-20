@@ -60,11 +60,7 @@ export function Contact() {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({ resolver: zodResolver(schema) })
-console.log({
-  service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  public: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-})
+
   const onSubmit = async (data: ContactFormValues) => {
   try {
     await emailjs.send(
